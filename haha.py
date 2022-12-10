@@ -1,18 +1,18 @@
-import numpy as np
-import altair as alt
-import pandas as pd
 import streamlit as st
 
-st.title('title')
-st.header('st.write')
+st.header('st.checkbox')
 
-code="""
-print(f"x+1")
+st.write ('What would you like to order?')
 
-"""
+icecream = st.checkbox('Ice cream')
+coffee = st.checkbox('Coffee')
+cola = st.checkbox('Cola')
 
-st.code(code, language='python')
+if icecream:
+     st.write("Great! Here's some more 🍦")
 
-st.latex("""x+x_1+x_2""")
+if coffee: 
+     st.write("Okay, here's some coffee ☕")
 
-st.caption("I'm caption")
+if cola:
+     st.write("Here you go 🥤")
